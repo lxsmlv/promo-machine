@@ -6,6 +6,7 @@ from backend.db.database import get_db
 from backend.db.models import init_db
 from backend.routes.projects import router as projects_router
 from backend.routes.scan import router as scan_router
+from backend.routes.analyze import router as analyze_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -28,6 +29,7 @@ app.add_middleware(
 
 app.include_router(projects_router)
 app.include_router(scan_router)
+app.include_router(analyze_router)
 
 @app.get("/api/health")
 async def health():
