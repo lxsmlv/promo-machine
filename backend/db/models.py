@@ -47,5 +47,9 @@ CREATE TABLE IF NOT EXISTS renders (
 """
 
 async def init_db(db):
-    await db.executescript(SCHEMA)
+    statements = SCHEMA.split(");")
+    for stmt in statements:
+        stmt = stmt.strip()
+        if stmt:
+            await db.execute(stmt + ");")
     await db.commit()
