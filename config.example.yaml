@@ -1,0 +1,8 @@
+openai_api_key: "sk-REPLACE-WITH-YOUR-KEY"
+data_dir: "./data"
+downloads_dir: "./data/downloads"
+projects_dir: "./data/projects"
+db_path: "./data/promo.db"
+host: "127.0.0.1"
+port: 8000
+frontend_port: 5173
