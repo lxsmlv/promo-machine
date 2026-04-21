@@ -8,6 +8,7 @@ from backend.routes.projects import router as projects_router
 from backend.routes.scan import router as scan_router
 from backend.routes.analyze import router as analyze_router
 from backend.routes.generate import router as generate_router
+from backend.routes.audio import router as audio_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -32,6 +33,7 @@ app.include_router(projects_router)
 app.include_router(scan_router)
 app.include_router(analyze_router)
 app.include_router(generate_router)
+app.include_router(audio_router)
 
 @app.get("/api/health")
 async def health():
