@@ -37,7 +37,7 @@ OpenAI API ключ получить на platform.openai.com и вставит�
 - [ ] **Step 1: Удалить старый Node.js проект**
 
 ```bash
-cd /Users/alexsamoilov/WebstormProjects/MyProjects/promo-machine
+cd promo-machine
 rm -rf src/ node_modules/ input/ output/ out/ package.json package-lock.json tsconfig.json
 ```
 
@@ -1633,7 +1633,7 @@ git commit -m "feat: video renderer — moviepy composer + batch render + effect
 - [ ] **Step 1: Инициализировать React проект**
 
 ```bash
-cd /Users/alexsamoilov/WebstormProjects/MyProjects/promo-machine
+cd promo-machine
 npm create vite@latest frontend -- --template react-ts
 cd frontend
 npm install
